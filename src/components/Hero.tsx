@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Fuel, MapPin, Building2 } from "lucide-react";
 
@@ -88,34 +89,38 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Visual card — swaps with real forecourt photo later */}
+          {/* Visual — real team photo at station */}
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.97 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.02] p-6 sm:p-8 backdrop-blur"
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur"
           >
-            <div className="flex items-center justify-between text-xs text-white/60">
-              <span className="tracking-[0.2em]">DESERT OIL • LIVE NETWORK</span>
-              <span className="inline-flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" /> Open now</span>
+            <div className="relative h-72 sm:h-96">
+              <Image src="/team.jpg" alt="Desert Oil team at station" fill className="object-cover" priority />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1e33] via-[#0a1e33]/20 to-transparent" />
+              <div className="absolute top-4 left-4 right-4 flex items-center justify-between text-xs">
+                <span className="rounded-full bg-black/50 px-3 py-1.5 tracking-[0.18em] text-white/80 backdrop-blur">DESERT OIL • LIVE NETWORK</span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-black/50 px-3 py-1.5 text-white/80 backdrop-blur"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" /> Open now</span>
+              </div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-sm font-semibold">Our people on the forecourt — 24H, Shopping, Autocare.</p>
+                <p className="mt-0.5 text-xs text-white/65">No. 18 Lindsay Square, Near DVLA Achimota, Accra.</p>
+              </div>
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-white/10">
               {stats.map((s, i) => (
                 <motion.div
                   key={s.label}
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-                  className="rounded-2xl bg-white/[0.06] border border-white/10 p-4"
+                  className="bg-[#0a1e33] p-4"
                 >
-                  <div className="text-2xl font-extrabold tracking-tight">{s.value}</div>
-                  <div className="mt-1 text-xs leading-snug text-white/60">{s.label}</div>
+                  <div className="text-xl font-extrabold tracking-tight">{s.value}</div>
+                  <div className="mt-0.5 text-[11px] leading-snug text-white/60">{s.label}</div>
                 </motion.div>
               ))}
-            </div>
-            <div className="mt-4 rounded-2xl bg-[#0090d4]/15 border border-[#0090d4]/25 p-4 text-xs leading-relaxed text-white/75">
-              Head Office: No. 18 Lindsay Square, Near DVLA Achimota, Accra.
-              Your photo of the forecourt / tankers goes here — this card is sized for it.
             </div>
           </motion.div>
         </div>
