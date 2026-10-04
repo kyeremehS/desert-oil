@@ -21,7 +21,7 @@ export default function Delivery() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-xs tracking-[0.24em] text-[#0090d4]">04. BULK SUPPLY</p>
+          <p className="font-mono text-xs tracking-[0.24em] text-[#0090d4]">01. BULK SUPPLY</p>
           <h2 className="mt-4 text-4xl font-extrabold leading-[1.02] tracking-[-0.02em] sm:text-5xl">
             Delivered right. <span className="text-[#e1251b]">Every time.</span>
           </h2>

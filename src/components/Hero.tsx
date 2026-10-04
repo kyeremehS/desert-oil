@@ -92,22 +92,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.45 }}
-        className="relative left-1/2 w-screen -translate-x-1/2"
-      >
-        <div className="relative h-[380px] sm:h-[480px] lg:h-[560px]">
-          <Image
-            src="/delivery-banner.png"
-            alt="Desert Oil tanker, quality delivery"
-            fill
-            className="object-cover object-[62%_center] lg:object-center"
-            priority
-          />
-        </div>
-      </motion.div>
     </section>
   );
 }

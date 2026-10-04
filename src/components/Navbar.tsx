@@ -9,6 +9,7 @@ const links = [
   { label: "Fuels", href: "/#products" },
   { label: "Stations", href: "/#stations" },
   { label: "Why Us", href: "/#why" },
+  { label: "Supply", href: "/supply" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
 ];
