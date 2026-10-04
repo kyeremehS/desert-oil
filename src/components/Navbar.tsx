@@ -6,10 +6,11 @@ import Image from "next/image";
 import { Menu, X, MapPin } from "lucide-react";
 
 const links = [
-  { label: "Fuels", href: "#products" },
-  { label: "Stations", href: "#stations" },
-  { label: "Why Us", href: "#why" },
-  { label: "Contact", href: "#contact" },
+  { label: "Fuels", href: "/#products" },
+  { label: "Stations", href: "/#stations" },
+  { label: "Why Us", href: "/#why" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -56,7 +57,7 @@ export default function Navbar() {
               030 243 5917
             </a>
             <Link
-              href="#stations"
+              href="/#stations"
               className="inline-flex items-center gap-2 bg-[#e1251b] px-5 py-3 font-mono text-xs font-medium tracking-[0.14em] text-white hover:bg-[#b91c14]"
             >
               <MapPin className="h-3.5 w-3.5" /> FIND A STATION
@@ -81,7 +82,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="#stations"
+              href="/#stations"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 bg-[#e1251b] px-4 py-3 font-mono text-xs tracking-[0.14em] text-white"
             >

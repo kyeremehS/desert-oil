@@ -15,7 +15,7 @@ export default function Leadership() {
           className="grid gap-6 md:grid-cols-2 md:items-end"
         >
           <div>
-            <p className="font-mono text-xs tracking-[0.24em] text-[#0a1e33]/50">04. THE PEOPLE</p>
+            <p className="font-mono text-xs tracking-[0.24em] text-[#0a1e33]/50">01. THE PEOPLE</p>
             <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl">Led by people who know fuel.</h2>
           </div>
           <p className="max-w-md text-sm leading-relaxed text-[#0a1e33]/65 md:justify-self-end">
