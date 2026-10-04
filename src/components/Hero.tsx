@@ -1,9 +1,16 @@
 "use client";
 
-import { motion } from "motion/react";
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
+
+const slides = [
+  { src: "/station-desert.png", label: "OUR FORECOURT" },
+  { src: "/forecourt-desert.jpg", label: "THE DESERT CANOPY" },
+  { src: "/team.jpg", label: "OUR CREW" },
+];
 
 const stats = [
   { value: "10+", label: "Years in downstream" },
@@ -12,17 +19,37 @@ const stats = [
 ];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+  const reduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (reduceMotion) return;
+    const t = setInterval(() => setIndex((i) => (i + 1) % slides.length), 6000);
+    return () => clearInterval(t);
+  }, [reduceMotion]);
+
   return (
     <section className="text-white">
       <div className="relative overflow-hidden bg-[#0a1e33]">
         <div className="absolute inset-0">
-          <Image
-            src="/station-desert.png"
-            alt="Desert Oil forecourt"
-            fill
-            className="object-cover"
-            priority
-          />
+          <AnimatePresence>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 1.06 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ opacity: { duration: 1.4, ease: "easeInOut" }, scale: { duration: 7, ease: "linear" } }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={slides[index].src}
+                alt={slides[index].label}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+            </motion.div>
+          </AnimatePresence>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a1e33]/85 via-[#0a1e33]/55 to-[#0a1e33]/80" />
 
@@ -76,11 +103,25 @@ export default function Hero() {
             </Link>
           </motion.div>
 
+          <div className="mt-8 flex items-center gap-3">
+            {slides.map((s, i) => (
+              <button
+                key={s.src}
+                onClick={() => setIndex(i)}
+                aria-label={`Show ${s.label}`}
+                className={`h-1 transition-all ${i === index ? "w-10 bg-white" : "w-5 bg-white/30 hover:bg-white/60"}`}
+              />
+            ))}
+            <span className="ml-2 font-mono text-[11px] tracking-[0.2em] text-white/60">
+              {slides[index].label}
+            </span>
+          </div>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 grid grid-cols-3 gap-6 border-t border-white/20 py-8"
+            className="mt-8 grid grid-cols-3 gap-6 border-t border-white/20 py-8"
           >
             {stats.map((s) => (
               <div key={s.label}>
@@ -91,7 +132,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 }
