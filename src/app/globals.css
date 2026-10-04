@@ -16,6 +16,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   background: #faf7f2;
   color: #0a1e33;

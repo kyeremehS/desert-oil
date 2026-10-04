@@ -1,4 +1,5 @@
 import Leadership from "@/components/Leadership";
+import Why from "@/components/Why";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
@@ -35,6 +36,8 @@ export default function About() {
       </div>
 
       <Leadership />
+
+      <Why />
 
       <div className="border-t border-[#0a1e33]/15 bg-[#faf7f2]">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">

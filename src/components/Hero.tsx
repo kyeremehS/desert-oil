@@ -66,10 +66,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 max-w-5xl text-[13vw] font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-8xl"
+            className="mt-6 max-w-5xl text-[14vw] font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-8xl"
           >
-            Quality fuel for a<br />
-            <span className="text-[#ff4a3d]">Ghana</span> that moves
+            Quality oil.
+            <br />
+            <span className="text-[#ff4a3d]">Quality service.</span>
           </motion.h1>
 
           <motion.p
@@ -85,18 +86,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-8 flex flex-wrap gap-3"
+            className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
           >
             <Link
               href="/#stations"
-              className="group inline-flex items-center gap-2 bg-[#e1251b] px-7 py-4 font-mono text-xs font-medium tracking-[0.14em] text-white hover:bg-[#b91c14]"
+              className="group inline-flex items-center justify-center gap-2 bg-[#e1251b] px-7 py-4 font-mono text-xs font-medium tracking-[0.14em] text-white hover:bg-[#b91c14]"
             >
               <MapPin className="h-4 w-4" /> FIND A STATION
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="/#products"
-              className="inline-flex items-center gap-2 border border-white/40 px-7 py-4 font-mono text-xs font-medium tracking-[0.14em] text-white hover:border-white hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 border border-white/40 px-7 py-4 font-mono text-xs font-medium tracking-[0.14em] text-white hover:border-white hover:bg-white/10"
             >
               SEE OUR FUELS
             </Link>
@@ -120,7 +121,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-8 grid grid-cols-3 gap-6 border-t border-white/20 py-8"
+            className="mt-8 grid grid-cols-3 gap-4 border-t border-white/20 py-8 sm:gap-6"
           >
             {stats.map((s) => (
               <div key={s.label}>

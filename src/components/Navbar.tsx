@@ -26,7 +26,7 @@ export default function Navbar() {
       <nav className="border-b border-[#0a1e33]/15 bg-[#faf7f2]/95 backdrop-blur">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center" aria-label="Desert Oil home">
-            <span className="relative block h-11 w-44 overflow-hidden rounded-md bg-white px-2">
+            <span className="relative block h-10 w-36 overflow-hidden rounded-md bg-white px-2 sm:h-11 sm:w-44">
               <Image
                 src="/logo-lockup.jpg"
                 alt="Desert Oil"
