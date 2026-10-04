@@ -1,58 +1,47 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Fuel, Flame, Truck, Ship, Zap, Container } from "lucide-react";
+import { Zap, Truck, Flame } from "lucide-react";
 
 const products = [
-  { icon: Zap, name: "Super", desc: "Clean, responsive petrol for everyday driving.", tag: "Retail" },
-  { icon: Truck, name: "Diesel", desc: "Power for cars, trucks, buses and industry.", tag: "Retail + Bulk" },
-  { icon: Flame, name: "Kerosene", desc: "Reliable household and commercial energy.", tag: "Retail" },
-  { icon: Container, name: "LPG", desc: "Safe cooking gas, refilled to standard.", tag: "Retail + Bulk" },
-  { icon: Fuel, name: "Premix", desc: "Supporting fishing communities and marine use.", tag: "Special" },
-  { icon: Ship, name: "MGO", desc: "Marine Gas Oil for vessels and industry.", tag: "B2B" },
+  { icon: Zap, name: "Super", desc: "Clean petrol for everyday driving." },
+  { icon: Truck, name: "Diesel", desc: "Power for cars, trucks and industry." },
+  { icon: Flame, name: "LPG & More", desc: "Gas, Kerosene, Premix & MGO." },
 ];
 
 export default function Products() {
   return (
-    <section id="products" className="bg-white py-16 sm:py-24">
+    <section id="products" className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl"
+          className="flex flex-col sm:flex-row sm:items-end justify-between gap-4"
         >
-          <p className="text-xs font-bold tracking-[0.22em] text-[#e1251b]">OUR FUELS</p>
-          <h2 className="mt-3 text-3xl sm:text-5xl font-extrabold tracking-tight text-[#0a1e33]">
-            One stop for every engine.
-          </h2>
-          <p className="mt-4 text-slate-600 leading-relaxed">
-            A focused range that meets your exact energy need — sourced flexibly
-            to keep you moving in a fast-moving market.
-          </p>
+          <div>
+            <p className="text-xs font-bold tracking-[0.22em] text-[#e1251b]">FUELS</p>
+            <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Everything your engine needs.</h2>
+          </div>
+          <p className="max-w-sm text-sm text-slate-600 leading-relaxed">Three essentials at every forecourt — full range on request for bulk buyers.</p>
         </motion.div>
 
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-8 grid sm:grid-cols-3 gap-4">
           {products.map((p, i) => (
             <motion.div
               key={p.name}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.55, delay: (i % 3) * 0.08 }}
-              whileHover={{ y: -4 }}
-              className="group rounded-3xl border border-slate-200 bg-white p-6 hover:border-[#0090d4]/50 hover:shadow-xl hover:shadow-[#0090d4]/10 transition-all"
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="rounded-3xl border border-slate-150 border-slate-200 bg-slate-50/60 p-7 hover:bg-white hover:shadow-xl hover:shadow-slate-200 transition-all"
             >
-              <div className="flex items-start justify-between">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0a1e33] text-white group-hover:bg-[#0090d4] transition-colors">
-                  <p.icon className="h-5 w-5" />
-                </span>
-                <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold text-slate-600">{p.tag}</span>
-              </div>
-              <h3 className="mt-5 text-xl font-bold">{p.name}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{p.desc}</p>
-              <span className="mt-4 inline-block text-sm font-semibold text-[#0090d4]">Learn more →</span>
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#0a1e33] text-white">
+                <p.icon className="h-5 w-5" />
+              </span>
+              <h3 className="mt-4 text-lg font-bold">{p.name}</h3>
+              <p className="mt-1 text-sm text-slate-600">{p.desc}</p>
             </motion.div>
           ))}
         </div>
