@@ -13,7 +13,7 @@ export default function Contact() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-mono text-xs tracking-[0.24em] text-white/50">04. VISIT US</p>
+          <p className="font-mono text-xs tracking-[0.24em] text-white/50">05. VISIT US</p>
           <h2 className="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.02] tracking-[-0.02em] sm:text-6xl">
             Come and fill up <span className="text-[#e1251b]">today.</span>
           </h2>
