@@ -8,7 +8,6 @@ import { ArrowRight, MapPin } from "lucide-react";
 
 const slides = [
   { src: "/station-desert.png", label: "OUR FORECOURT" },
-  { src: "/forecourt-desert.jpg", label: "THE DESERT CANOPY" },
   { src: "/team.jpg", label: "OUR CREW" },
 ];
 
