@@ -1,5 +1,6 @@
 import Leadership from "@/components/Leadership";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 
 const facts = [
@@ -34,6 +35,19 @@ export default function About() {
       </div>
 
       <Leadership />
+
+      <div className="border-t border-[#0a1e33]/15 bg-[#faf7f2]">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+          <div className="overflow-hidden rounded-xl border border-[#0a1e33]/15">
+            <div className="relative h-[300px] sm:h-[420px]">
+              <Image src="/team.jpg" alt="Desert Oil forecourt crew" fill className="object-cover" />
+            </div>
+            <p className="border-t border-[#0a1e33]/15 bg-white px-5 py-4 font-mono text-[11px] tracking-[0.18em] text-[#0a1e33]/60">
+              OUR FORECOURT CREW. THIS IS WHO SERVES YOU.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div className="border-t border-white/10 bg-[#0a1e33] text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-14 sm:px-6 sm:py-16">

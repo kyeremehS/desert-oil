@@ -39,10 +39,10 @@ export default function Stations() {
             className="overflow-hidden rounded-xl border border-[#0a1e33]/15"
           >
             <div className="relative h-72 sm:h-96">
-              <Image src="/team.jpg" alt="Desert Oil team on the forecourt" fill className="object-cover" />
+              <Image src="/station-desert.png" alt="Desert Oil forecourt" fill className="object-cover" />
             </div>
             <p className="border-t border-[#0a1e33]/15 bg-[#faf7f2] px-5 py-4 font-mono text-[11px] tracking-[0.18em] text-[#0a1e33]/60">
-              OUR CREW ON THE FORECOURT. THIS IS WHO SERVES YOU.
+              A DESERT OIL FORECOURT. CLEAN PUMPS, CLEAR PRICES.
             </p>
           </motion.div>
 
