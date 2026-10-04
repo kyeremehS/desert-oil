@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MapPin, ArrowRight } from "lucide-react";
 
 const stations = [
-  { name: "Achimota — Head Office", area: "Accra • Greater Accra" },
+  { name: "Achimota Head Office", area: "Accra • Greater Accra" },
   { name: "Aboabo", area: "Tafo • Ashanti" },
   { name: "Prang", area: "Bono East" },
 ];
@@ -23,7 +23,7 @@ export default function Stations() {
         >
           <Image src="/team.jpg" alt="Desert Oil team" fill className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/55 to-transparent" />
-          <p className="absolute bottom-5 left-5 right-5 text-sm font-medium text-white">Our crew on the forecourt — the face of Desert Oil.</p>
+          <p className="absolute bottom-5 left-5 right-5 text-sm font-medium text-white">Our crew on the forecourt. This is who serves you.</p>
         </motion.div>
 
         <motion.div
@@ -33,7 +33,8 @@ export default function Stations() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-xs font-bold tracking-[0.22em] text-[#e1251b]">NETWORK</p>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Never far from a Desert Oil.</h2>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Close to you.</h2>
+          <p className="mt-3 text-sm text-slate-600 leading-relaxed">Find us in Accra, Ashanti, Bono East and beyond.</p>
           <ul className="mt-6 space-y-3">
             {stations.map((s) => (
               <li key={s.name} className="flex items-center justify-between rounded-2xl bg-white border border-slate-200 px-5 py-4">

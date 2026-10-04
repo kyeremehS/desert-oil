@@ -18,14 +18,16 @@ export default function Navbar() {
   return (
     <header className="absolute top-0 inset-x-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6">
-        <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/15 bg-[#0a1e33]/70 px-4 py-3 backdrop-blur-md">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="relative h-9 w-24 overflow-hidden rounded-lg bg-white px-1">
-              <Image src="/logo.png" alt="Desert Oil" fill className="object-contain" priority />
-            </span>
-            <span className="hidden sm:block leading-tight">
-              <span className="block text-sm font-extrabold tracking-tight text-white">DESERT OIL</span>
-              <span className="block text-[10px] font-medium tracking-[0.22em] text-white/60">GHANA LIMITED</span>
+        <div className="mt-4 flex items-center justify-between rounded-2xl border border-white/15 bg-[#0a1e33]/80 py-2.5 pl-4 pr-2.5 backdrop-blur-md">
+          <Link href="/" className="flex items-center" aria-label="Desert Oil home">
+            <span className="relative block h-11 w-44">
+              <Image
+                src="/logo.png"
+                alt="Desert Oil"
+                fill
+                className="object-contain object-left mix-blend-screen"
+                priority
+              />
             </span>
           </Link>
 
@@ -38,7 +40,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:block">
-            <Link href="#stations" className="inline-flex items-center gap-1.5 rounded-full bg-[#e1251b] px-4 py-2 text-sm font-semibold text-white hover:bg-[#b91c14] transition-colors">
+            <Link href="#stations" className="inline-flex items-center gap-1.5 rounded-full bg-[#e1251b] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#b91c14] transition-colors">
               <MapPin className="h-4 w-4" /> Find a Station
             </Link>
           </div>

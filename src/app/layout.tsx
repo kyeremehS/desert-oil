@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Desert Oil Ghana | Fueling Ghana's Journey",
   description:
-    "Desert Oil Ghana Limited — modern Oil Marketing Company. Super, Diesel, Kerosene, LPG, Premix & MGO. Retail stations and bulk supply across Ghana.",
+    "Desert Oil Ghana Limited. Quality fuel and quality service. Super, Diesel, Kerosene, LPG, Premix and MGO across Ghana.",
 };
 
 export default function RootLayout({
