@@ -6,8 +6,10 @@
   --color-desert-navy: #0b2545;
   --color-desert-red: #e1251b;
   --color-desert-sand: #f6f3ec;
+  --color-desert-paper: #faf7f2;
   --color-desert-gold: #f5a623;
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
 html {
@@ -15,25 +17,13 @@ html {
 }
 
 body {
-  background: #ffffff;
+  background: #faf7f2;
   color: #0a1e33;
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-@keyframes ticker {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-ticker {
-  animation: ticker 28s linear infinite;
-}
-
-.hero-grid {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 60%, transparent 100%);
+::selection {
+  background: #e1251b;
+  color: #fff;
 }

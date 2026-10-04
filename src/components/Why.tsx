@@ -1,21 +1,34 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ShieldCheck, Gauge, HeartHandshake } from "lucide-react";
 
 const items = [
-  { icon: Gauge, title: "Accurate pumps", desc: "What you pay for is what you get." },
-  { icon: ShieldCheck, title: "Clean and safe", desc: "A forecourt you can trust day and night." },
-  { icon: HeartHandshake, title: "People who care", desc: "Quick hands and honest help at every visit." },
+  { no: "01", title: "Accurate pumps", desc: "What you pay for is what enters your tank. Every litre counted, every cedi clear." },
+  { no: "02", title: "Clean and safe", desc: "Swept forecourts, working extinguishers, staff who follow the rules. Day and night." },
+  { no: "03", title: "People who care", desc: "Quick hands, honest help, a greeting when you arrive. That is the Desert Oil habit." },
 ];
 
 export default function Why() {
   return (
-    <section id="why" className="bg-white py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
-        <p className="text-xs font-bold tracking-[0.22em] text-[#0090d4]">WHY DESERT OIL</p>
-        <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight">Why drivers choose us.</h2>
-        <div className="mt-8 grid sm:grid-cols-3 gap-4 text-left">
+    <section id="why" className="border-t border-[#0a1e33]/15 bg-[#faf7f2]">
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="grid gap-6 md:grid-cols-2 md:items-end"
+        >
+          <div>
+            <p className="font-mono text-xs tracking-[0.24em] text-[#0a1e33]/50">03. WHY DESERT OIL</p>
+            <h2 className="mt-4 text-4xl font-extrabold tracking-[-0.02em] sm:text-5xl">Why drivers choose us.</h2>
+          </div>
+          <p className="max-w-md text-sm leading-relaxed text-[#0a1e33]/65 md:justify-self-end">
+            Anyone can sell fuel. Few sell trust. Here is what brings drivers back to our pumps.
+          </p>
+        </motion.div>
+
+        <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-[#0a1e33]/15 bg-[#0a1e33]/15 sm:grid-cols-3">
           {items.map((it, i) => (
             <motion.div
               key={it.title}
@@ -23,11 +36,11 @@ export default function Why() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="rounded-3xl bg-[#0a1e33] text-white p-7"
+              className="bg-[#0a1e33] p-8 text-white"
             >
-              <it.icon className="h-6 w-6 text-[#0090d4]" />
-              <h3 className="mt-4 font-bold">{it.title}</h3>
-              <p className="mt-1.5 text-sm text-white/60">{it.desc}</p>
+              <p className="font-mono text-xs tracking-[0.2em] text-[#0090d4]">{it.no}</p>
+              <h3 className="mt-4 text-xl font-extrabold tracking-tight">{it.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/65">{it.desc}</p>
             </motion.div>
           ))}
         </div>
