@@ -6,9 +6,7 @@ import Image from "next/image";
 import { Menu, X, MapPin } from "lucide-react";
 
 const links = [
-  { label: "Fuels", href: "/#products" },
   { label: "Stations", href: "/#stations" },
-  { label: "Why Us", href: "/#why" },
   { label: "Supply", href: "/supply" },
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
@@ -51,13 +49,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="hidden items-center gap-3 md:flex">
-            <a
-              href="tel:0302435917"
-              className="border border-[#0a1e33]/25 bg-transparent px-5 py-3 font-mono text-xs font-medium tracking-[0.14em] text-[#0a1e33] hover:border-[#0a1e33]"
-            >
-              030 243 5917
-            </a>
+          <div className="hidden md:block">
             <Link
               href="/#stations"
               className="inline-flex items-center gap-2 bg-[#e1251b] px-5 py-3 font-mono text-xs font-medium tracking-[0.14em] text-white hover:bg-[#b91c14]"
