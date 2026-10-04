@@ -24,21 +24,15 @@ export default function Navbar() {
 
       <nav className="border-b border-[#0a1e33]/15 bg-[#faf7f2]/95 backdrop-blur">
         <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 sm:px-6">
-          <Link href="/" className="flex items-center gap-3" aria-label="Desert Oil home">
-            <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-md bg-[#0a1e33]">
-              <span className="relative block h-9 w-9">
-                <Image
-                  src="/logo.png"
-                  alt="Desert Oil"
-                  fill
-                  className="object-contain mix-blend-screen"
-                  priority
-                />
-              </span>
-            </span>
-            <span className="leading-none">
-              <span className="block font-mono text-[15px] font-bold tracking-[0.08em] text-[#0a1e33]">DESERT OIL</span>
-              <span className="mt-1 block font-mono text-[10px] tracking-[0.24em] text-[#0a1e33]/55">GHANA LIMITED</span>
+          <Link href="/" className="flex items-center" aria-label="Desert Oil home">
+            <span className="relative block h-11 w-44 overflow-hidden rounded-md bg-white px-2">
+              <Image
+                src="/logo-lockup.jpg"
+                alt="Desert Oil"
+                fill
+                className="object-contain"
+                priority
+              />
             </span>
           </Link>
 

@@ -5,10 +5,8 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-[#071423] text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr]">
         <div>
-          <span className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-md bg-white/5">
-            <span className="relative block h-9 w-9">
-              <Image src="/logo.png" alt="Desert Oil" fill className="object-contain mix-blend-screen" />
-            </span>
+          <span className="relative block h-12 w-48 overflow-hidden rounded-md bg-white px-2">
+            <Image src="/logo-lockup.jpg" alt="Desert Oil" fill className="object-contain" />
           </span>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/60">
             Independent Ghanaian oil marketing company. Super, Diesel, LPG, Kerosene, Premix and MGO.
