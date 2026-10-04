@@ -2,13 +2,9 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
-const stations = [
-  { name: "Achimota Head Office", area: "Accra, Greater Accra" },
-  { name: "Aboabo", area: "Tafo, Ashanti" },
-  { name: "Prang", area: "Bono East" },
-];
+import { stations } from "@/data/stations";
 
 export default function Stations() {
   return (
@@ -65,10 +61,10 @@ export default function Stations() {
                 <span className="text-right font-mono text-[11px] tracking-[0.12em] text-[#0a1e33]/55">{s.area.toUpperCase()}</span>
               </li>
             ))}
-            <a href="#contact" className="group mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-[0.14em] text-[#0a1e33]">
+            <Link href="/stations" className="group mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-[0.14em] text-[#0a1e33]">
               SEE ALL STATIONS
               <ArrowRight className="h-4 w-4 text-[#e1251b] transition-transform group-hover:translate-x-0.5" />
-            </a>
+            </Link>
           </motion.ul>
         </div>
       </div>
